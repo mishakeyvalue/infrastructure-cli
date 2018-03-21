@@ -26,15 +26,18 @@ library:
   source-dirs: src
 
 executables:
-  infrastructure-cli-exe:
+  rpi:
     main:                Main.hs
-    source-dirs:         app
+    source-dirs:         tools/raspberrypi3
     ghc-options:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
     dependencies:
-    - infrastructure-cli
+      - directory
+      - infrastructure-cli
+      - optparse-applicative
+      - process
 
 tests:
   infrastructure-cli-test:

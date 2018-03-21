@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: f4b7904be926bcc354ed9cead25a6f8912fd20d732678e1217ada7e1bbd6e895
+-- hash: 7ebe7bfdd648c704b290796182ebfb2609097052a0d16d76bb9ce128f6189049
 
 name:           infrastructure-cli
 version:        0.1.0.0
@@ -36,14 +36,17 @@ library
       Paths_infrastructure_cli
   default-language: Haskell2010
 
-executable infrastructure-cli-exe
+executable rpi
   main-is: Main.hs
   hs-source-dirs:
-      app
+      tools/raspberrypi3
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , directory
     , infrastructure-cli
+    , optparse-applicative
+    , process
   other-modules:
       Paths_infrastructure_cli
   default-language: Haskell2010
